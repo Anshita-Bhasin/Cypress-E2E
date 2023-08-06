@@ -1,7 +1,7 @@
 name: Schedule Test Build
 on: 
  schedule:
-   - cron: '*/5 4 * * *'
+   - cron: '*/1 * * * *'
 jobs:
   Add-To-Cart-run:
     runs-on: ubuntu-22.04
