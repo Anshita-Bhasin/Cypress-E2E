@@ -1,4 +1,4 @@
-name: Browser Test Build
+name: Parallel  Test Build
 on: push
 jobs:
   Add-To-Cart-run:
