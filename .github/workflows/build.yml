@@ -21,13 +21,9 @@ jobs:
           name: Mochawesome-html-report-summary
           path: cypress/reports/html
 
-      - name: Slack Notifications
-        uses: act10ns/slack@v1
+      - name: Slack 
+        uses: adrey/slack-file-upload-action@master
         with:
-          webhook-url: ${{ secrets.SLACK_WEBHOOK_URL }}
+          token: ${{ secrets.SLACK_WEBHOOK_URL  }}
+          path: cypress/reports/html
           status: ${{ job.status }}
-          steps: ${{ toJson(steps) }}
-
-
-          message: Cypress Test Report - https://github.com/Anshita-Bhasin/Cypress-E2E/actions/runs/${{ github.run_id }})
-   
