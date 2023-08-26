@@ -15,17 +15,4 @@ jobs:
         with:
          command: npm run test:addToCart        
 
-      - name: Upload Report
-        uses: actions/upload-artifact@v3
-        with:
-          name: Mochawesome-html-report-summary
-          path: cypress/reports/html
-
-      - name: Slack 
-        uses: rtCamp/action-slack-notify@v2
-        env:
-          SLACK_COLOR: ${{ job.status }} # or a specific color like 'good' or '#FF00FF'
-          SLACK_ICON: https://user-images.githubusercontent.com/10338077/258572425-7e322357-a5b8-4dd4-8082-8c6a989a419f.png
-          SLACK_MESSAGE: Cypress Test Report - https://github.com/Anshita-Bhasin/Cypress-E2E/actions/runs/${{ github.run_id }})
-          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
-          SLACK_USERNAME: anshita test report
+     
