@@ -27,6 +27,7 @@ jobs:
           webhook-url: ${{ secrets.SLACK_WEBHOOK_URL }}
           status: ${{ job.status }}
           steps: ${{ toJson(steps) }}
+
           border: ${{ job.status }}
           message: Cypress Test Report - https://github.com/Anshita-Bhasin/Cypress-E2E/actions/runs/${{ github.run_id }})
    
