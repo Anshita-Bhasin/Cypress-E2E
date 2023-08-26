@@ -24,7 +24,7 @@ jobs:
       - name: Slack Notifications
         uses: act10ns/slack@v1
         with:
-          webhook-url: ‘https://hooks.slack.com/services/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’
+          webhook-url: https://hooks.slack.com/services/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
           status: ‘${{ job.status }}’
           message: Test Report - https://github.com/Anshita-Bhasin/Cypress-E2E/actions/runs/${{ github.run_id }})
    
