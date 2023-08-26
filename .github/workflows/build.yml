@@ -28,6 +28,5 @@ jobs:
           status: ${{ job.status }}
           steps: ${{ toJson(steps) }}
           border: ${{ job.status }}
-          icon: ${{icon jobStatus}}
           message: Cypress Test Report - https://github.com/Anshita-Bhasin/Cypress-E2E/actions/runs/${{ github.run_id }})
    
