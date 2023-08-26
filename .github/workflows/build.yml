@@ -17,6 +17,7 @@ jobs:
 
       - name: Cypress Test Report
         uses: actions/upload-artifact@v3
+        if: always()
         with:
           name: Mochawesome HTML Report
           path: cypress/reports/html   
