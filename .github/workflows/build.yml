@@ -16,6 +16,7 @@ jobs:
          command: npm run test:addToCart    
 
       - name: Cypress Test Report
+        if: always()
         uses: actions/upload-artifact@v3 
         with:
           name: Mochawesome HTML Report
@@ -23,6 +24,7 @@ jobs:
        
 
       - name: Slack Notification
+        if: always()
         uses: rtCamp/action-slack-notify@v2
         env:
           SLACK_COLOR: ${{ job.status }} # or a specific color like 'good' or '#ff00ff'
