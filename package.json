@@ -4,10 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test:addToCart": "npx cypress run --spec cypress/e2e/tests/addToCartTest.cy.js",
+    "test:addToCart": "npx cypress run --spec cypress/e2e/tests/addToCartTest.cy.js --record --key fb12f2c3-308b-4a42-a1c3-fec27aa0768e",
     "test:registerFlow": "npx cypress run --spec cypress/e2e/tests/registerTest.cy.js",
     "test:browser": "npx cypress run --spec cypress/e2e/tests/addToCartTest.cy.js --browser chrome",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npx cypress run --record --key fb12f2c3-308b-4a42-a1c3-fec27aa0768e",
+    "cy:parallel": "cypress-parallel -s cy:run -t 2 -d cypress/e2e/tests -a "
   },
   "repository": {
     "type": "git",
@@ -20,7 +21,10 @@
   },
   "homepage": "https://github.com/Anshita-Bhasin/Cypress-E2E#readme",
   "devDependencies": {
-    "cypress": "^12.17.1",
+    "cypress": "13.0",
     "cypress-mochawesome-reporter": "^3.5.1"
+  },
+  "dependencies": {
+    "cypress-parallel": "^0.13.0"
   }
 }

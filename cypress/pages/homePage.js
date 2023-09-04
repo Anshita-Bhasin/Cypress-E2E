@@ -17,7 +17,6 @@ export class homePage {
 
         cy.get(this.weblocators.search_input).type(productName)
         cy.get(this.weblocators.click_search).click()
-
     }
     addToCart() {
 
