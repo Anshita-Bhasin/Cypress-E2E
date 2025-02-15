@@ -20,9 +20,9 @@
     "url": "https://github.com/Anshita-Bhasin/Cypress-E2E/issues"
   },
   "homepage": "https://github.com/Anshita-Bhasin/Cypress-E2E#readme",
-  "devDependencies": {
-    "cypress": "13.0",
-    "cypress-mochawesome-reporter": "^3.5.1"
+  "devDependencies": 
+  {
+    "cypress": "13.0"
   },
   "dependencies": {
     "cypress-parallel": "^0.13.0"

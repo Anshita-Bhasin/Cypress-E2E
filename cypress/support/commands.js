@@ -30,3 +30,20 @@ Cypress.Commands.add('login', (email, password) => {
     cy.get('#input-password').type(password)
     cy.get('input.btn.btn-primary').click()
 })
+// cypress/support/commands.js
+
+Cypress.Commands.add("captureConsoleLogs", () => {
+    const logs = [];
+
+    cy.on("window:console", (log) => {
+        logs.push(log);
+    });
+
+    Cypress.once("test:after:run", () => {
+        // Write the console logs to a file or any other preferred storage
+        // In this example, we append logs to a file named "consoleLogs.txt"
+        cy.writeFile("consoleLogs.txt", logs.join("\n"), { flag: "a+" });
+    });
+});
+
+

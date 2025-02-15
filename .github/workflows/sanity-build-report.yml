@@ -1,0 +1,25 @@
+name: Sanity Build
+on: push
+jobs:
+  cypress-run:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        
+      # Install npm dependencies, cache them correctly
+      # and run all Cypress tests
+
+
+      - name: Cypress run
+        uses: cypress-io/github-action@v5
+        with:
+         command: npm run test:registerFlow
+
+
+      - name: Cypress Test Report
+        uses: actions/upload-artifact@v4
+        with:
+          name: Mochawesome HTML Report - Reg Flow
+          path: cypress/reports/html/index.html   
+  
