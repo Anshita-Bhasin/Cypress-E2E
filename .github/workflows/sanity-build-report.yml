@@ -28,7 +28,7 @@ jobs:
       - uses: actions/download-artifact@v4
         with:
           path: my-artifact
-          pattern: Mochawesome-HTML-Reg-Flow-*
+          name: Mochawesome-HTML-Reg-Flow
           merge-multiple: true
 
       - name: Display structure of downloaded files
