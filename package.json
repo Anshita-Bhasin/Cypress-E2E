@@ -22,9 +22,10 @@
   "homepage": "https://github.com/Anshita-Bhasin/Cypress-E2E#readme",
   "devDependencies": 
   {
-    "cypress": "13.0"
+    "cypress": "14.0"
   },
   "dependencies": {
-    "cypress-parallel": "^0.13.0"
+    "cypress-parallel": "^0.13.0",
+     "cypress-mochawesome-reporter": "^3.5.1"
   }
 }
